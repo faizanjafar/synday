@@ -1,0 +1,885 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+:root{
+  --sydney-headings-color: #00102E;
+  --brand-color: #FFD00A;
+  --btn-hover-bg: #c7a210;
+  --sydney-dark-background: #00102E;
+  --sydney-grey-color: #737C8C;
+  --sydney-text-color: #233452;
+  --sydney-light-background: #F4F5F7;
+  --white-color: #fff;
+  --sydney-button-background: #d65050;
+  --font-family: Manrope, sans-serif;
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  color: #142e2c;
+  overflow-x: hidden;
+}
+html{
+  overflow-x: hidden;
+}
+/* ------------- Utility class -------------------- */
+/* -----------------👇👇👇👇-------------------- */
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none !important;
+}
+ul{
+  padding-left: 0;
+  margin-bottom: 0 !important;
+}
+.menu-btn,
+.cancel-btn{
+  display: none;
+}
+.nav-logo{
+  display: none;
+}
+.scroll-btn{
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  font-size: 1rem;
+  color: var(--white-color);
+  background-color: var(--brand-color);
+  padding: 13px 17px;
+  border-radius: 2px;
+}
+.bgcolor{
+  background-color: var(--sydney-button-background) !important;
+}
+.same-btn{
+  padding: 16px 40px 16px 40px;
+  border: none;
+  outline: none;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all .4s ease-in-out;
+}
+.search-btn{
+  padding: .5rem 30px .5rem 30px;
+  border: 1px solid var(--brand-color);
+  outline: none;
+  font-size: .9rem !important;
+  font-weight: 500 !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all .4s ease-in-out;
+  background-color: var(--brand-color) !important;
+}
+.main-btn{
+  background-color: var(--brand-color);
+  color: var(--sydney-headings-color);
+  border: 2px solid var(--brand-color);
+}
+.main-btn:hover{
+  background-color: var(--btn-hover-bg);
+  border: 2px solid var(--btn-hover-bg);
+}
+.white-btn{
+  background-color: transparent;
+  color: var(--white-color);
+  border: 2px solid var(--white-color);
+  margin-left: 1.5rem;
+}
+.white-btn:hover{
+  background-color: var(--white-color);
+  color: var(--sydney-headings-color);
+}
+
+/* Navbar Styling  */
+header{
+  position: relative;
+}
+nav{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  padding: 0rem 5rem;
+  z-index: 999;
+  opacity: .9;
+  background-color: var(--sydney-dark-background);
+}
+.nav_bg{
+  background-color: var(--sydney-dark-background);
+  opacity: 1;
+}
+.logo h2{
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--white-color);
+}
+.nav_items{
+  align-items: center;
+}
+.nav_items ul{
+  display: flex;
+}
+
+.nav_items ul li{
+  margin-left: .5rem;
+}
+
+.search{
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--sydney-dark-background);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search input{
+  width: 40%;
+  padding: .5rem 1rem;
+  border: none;
+  outline: none;
+
+}
+.icon-search{
+  position: absolute;
+  top: 1.8rem;
+  right: 3rem;
+  font-size: 1.1rem !important;
+}
+.nav_items ul li a{
+  padding: .5rem;
+  font-size: .95rem;
+  letter-spacing: .2px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: var(--white-color);
+  transition: all .3s ease-in-out;
+}
+.nav_items ul li a:hover{
+  color: var(--brand-color);
+}
+
+.header_banner{
+  background-image: url(../src/img/header.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.header_banner::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .9;
+  z-index: -1;
+  background-color: var(--sydney-dark-background);
+}
+.header_banner_content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  padding: 16rem 0 6rem 0rem !important;
+}
+.header_banner_content h1{
+  font-size: 62px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--white-color);
+  font-family: var(--font-family);
+  width: 60%;
+  margin: 0rem auto 2rem auto;
+}
+
+.header_banner_content p{
+  color: var(--white-color);
+  font-size: 1.1rem;
+  font-weight: 500;
+  width: 50%;
+  font-family: var(--font-family);
+  text-align: center;
+  margin: 0 auto;
+  word-spacing: 1px;
+  line-height: 1.9;
+  letter-spacing: .3px;
+}
+
+.header-btn{
+  margin-top: 3rem;
+  display: flex;
+}
+
+.search-icon i{
+  color: var(--white-color);
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
+.seller-content{
+  position: relative;
+  background-color: var(--white-color);
+  padding: 30px 30px;
+  transform: translateY(60px);
+  z-index: 3;
+}
+.seller-content .icon i{
+  color: var(--sydney-headings-color);
+  background-color: var(--brand-color);
+  height: 50px;
+  width: 50px;
+  line-height: 2.5;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 50%;
+}
+
+.seller-content h5{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--sydney-headings-color);
+  margin: 1.3rem 0;
+}
+
+.seller-content p{
+  font-size: 1.05rem;
+  font-weight: 500;
+  line-height: 1.8;
+  word-spacing: .3px;
+  font-family: var(--font-family);
+  padding: 0 0 1rem 0;
+  margin-bottom: 0;
+}
+
+
+/* Banner01 styling  */
+.section{
+  padding: 180px 0 20px 0;
+}
+.banner01{
+  background-color: var(--sydney-light-background);
+}
+.banner-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.banner-content {
+  padding-left: 3rem;
+}
+.banner-content .title{
+  font-size: .9rem;
+  font-weight: 500;
+  margin-bottom: .8rem !important;
+  color: var(--sydney-grey-color);
+}
+
+.banner-content h2{
+  font-size: 50px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  line-height: 1;
+  width: 75%;
+  margin-bottom: 1.5rem;
+  font-family: var(--font-family);
+}
+
+.banner-content p{
+  font-size: 1.02rem;
+  font-weight: 500;
+  line-height: 1.8;
+  word-spacing: 1px;
+  font-family: var(--font-family);
+  width: 60%;
+  margin-bottom: 3rem;
+}
+
+.banner02{
+  flex-direction: row-reverse;
+}
+
+
+
+/* Our Portfollio  */
+.portfolio-section{
+  margin-top: 5rem;
+}
+.portfolio-section img{
+  cursor: pointer;
+}
+.portfolio-heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.portfolio-heading h2{
+  font-size: 42px;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+}
+
+
+/* Developers Styling  */
+.developer{
+  background-color: var(--sydney-light-background);
+  padding-bottom: 7rem;
+}
+
+.developer-content{
+  padding: 30px 30px;
+  background-color: var(--white-color);
+}
+.developer-content p{
+  font-size: 1.03rem !important;
+  font-weight: 500;
+  font-family: var(--font-family);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+.developer-content .dev{
+  display: flex;
+  align-items: center !important;
+  justify-content: flex-start;
+}
+.dev .name{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.dev .dev-name h4{
+  margin-bottom: .1rem;
+  font-size: .95rem;
+  font-weight: 600;
+  font-family: var(--font-family);
+}
+.dev-name h5{
+  margin-bottom: 0rem;
+  font-size: 13px;
+  font-family: var(--font-family);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--sydney-grey-color);
+  letter-spacing: 1px
+}
+.developer-content img{
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+/* Hire Styling  */
+.hire{
+  background-color: var(--sydney-dark-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.hire .container{
+  padding: 6rem 0rem;
+  border-bottom: 1.7px solid var(--sydney-text-color);
+}
+.hire-content h2{
+  color: var(--white-color);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 45px;
+  margin-bottom: 0;
+  line-height: 1;
+}
+
+
+/* Footer Styling  */
+.footer{
+  background-color: var(--sydney-dark-background);
+}
+.footer .container{
+  padding: 7rem 0;
+  border-bottom: 1.7px solid var(--sydney-text-color);
+}
+
+.footer .logo h2{
+  color: var(--white-color);
+  padding-left: 2rem;
+
+}
+.footer-container{
+  padding: 2rem 0 !important;
+  
+}
+
+.footer .left p{
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  word-spacing: 1px;
+}
+.footer .right span{
+  margin-left: 1rem;
+}
+.footer .right span i{
+  color: var(--white-color);
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: all .4s ease-in-out;
+}
+.footer .right span i:hover{
+  color: var(--brand-color);
+}
+
+
+.footer ul h5{
+  color: var(--white-color);
+  font-size: 17px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  margin-bottom: 1.8rem;
+}
+.footer ul li{
+  margin-bottom: 1rem;
+}
+.footer ul li a{
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  letter-spacing: 1px;
+}
+
+
+
+
+
+/*-=========================
+      Blog Page Styling  
+ ============================*/
+ .blog-content img{
+  cursor: pointer;
+ }
+ .blog-detail .year{
+  color: var(--sydney-grey-color);
+  font-size: .9rem !important;
+  font-weight: 700;
+  font-family: var(--font-family);
+ }
+
+ .blog-detail a .title{
+  font-size: 28px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--sydney-headings-color);
+  width: 95%;
+  transition: all .3s ease-in-out;
+ }
+ .blog-detail a .title:hover{
+  color: var(--sydney-grey-color);
+ }
+ .blog-detail p{
+  color: var(--sydney-grey-color) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  padding-top: .5rem;
+  line-height: 1.7;
+ }
+ .blog-detail button{
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  color: var(--sydney-headings-color);
+  background-color: transparent;
+ }
+
+ .blog-right{
+  border: 1.8px solid #dbdbdb;
+  padding: 35px 15px;
+ }
+
+ .blog-right input{
+  outline: none;
+  font-size: 1rem;
+  color: #767676;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  height: 50px;
+  padding: 4px 20px;
+  border-radius: 0px;
+  font-weight: 500;
+  font-family: var(--font-family);
+  box-shadow: none;
+ }
+
+ .blog-right input:focus{
+  box-shadow: none !important;
+  border: 1px solid var(--sydney-text-color);
+ }
+
+ .blog-right h5{
+  font-size: 1.4rem;
+  font-weight: 700;
+  font-family: var(--font-family);
+  color: var(--sydney-headings-color);
+ }
+ .blog-right .post{
+  margin-bottom: 2.3rem;
+  margin-top: 3.7rem;
+ }
+ 
+ .blog-right p{
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: .5rem;
+  color: var(--sydney-text-color);
+  font-family: var(--font-family);
+  line-height: 1.7;
+ }
+
+ .blog-right a{
+  color: var(--sydney-text-color) !important;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+ }
+
+ .blog-right h4{
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  margin-bottom: 1.5rem;
+ }
+
+
+
+ /*-=========================
+      Services Page Styling  
+ ============================*/
+
+
+ .services-page{
+  background-color: #f4f5f7;
+}
+
+.same-section{
+  padding: 9rem 0 9rem 0;
+ }
+
+ .heading h2{
+  font-size: 40px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+  margin-bottom: 2.5rem;
+}
+.bg-white{
+  background-color: var(--white-color) !important;
+}
+
+.services-page .seller-content{
+  transform: translateY(0);
+}
+
+.services h5{
+  font-size: .93rem;
+  font-weight: 600;
+  color: var(--sydney-grey-color);
+  font-family: var(--font-family);
+  word-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+.services h3{
+  font-size: 33px;
+  font-weight: 600;
+  width: 95%;
+  line-height: 1;
+  font-family: var(--font-family);
+  color: var(--sydney-headings-color);
+  margin-bottom: 3.5rem;
+}
+
+.right-brand{
+  padding-left: 3rem !important;
+}
+.brand-content i{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: var(--brand-color);
+  color: var(--sydney-dark-background);
+  text-align: center;
+  line-height: 2.5;
+  font-size: 1.2rem;
+}
+
+.brand-content h3{
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+  margin-bottom: .7rem;
+}
+
+.brand-content p{
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: var(--sydney-text-color);
+  line-height: 1.7;
+  padding: .7rem 0;
+}
+
+
+ /*-=========================
+      About Page Styling  
+ ============================*/
+
+.about .single-content h5{
+  font-size: .9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  color: var(--sydney-grey-color);
+  margin-bottom: 1rem;
+}
+
+.single-content h1{
+  font-size: 49px;
+  font-weight: 700;
+  line-height: 1.1;
+  width: 90%;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+  margin-bottom: 1.4rem;
+}
+
+.single-content p{
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: var(--font-family);
+  color: var(--sydney-text-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  word-spacing: 1px;
+  width: 96%;
+
+}
+
+.about-comp2{
+  background-color: var(--sydney-dark-background);
+}
+.about-comp2 .single-content {
+  padding-left: 2rem;
+}
+.about-comp2 .single-content h2{
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--white-color);
+  font-family: var(--font-family);
+  margin-bottom: 3rem;
+}
+
+.about-comp2 .single-content h5{
+  font-family: var(--font-family);
+  font-size: 1.16rem;
+  font-weight: 500;
+}
+.about-comp2 .single-content p{
+  font-family: var(--font-family);
+  line-height: 1.7;
+  width: 95%;
+  font-size: .97rem;
+  font-weight: 500;
+  letter-spacing: .2px;
+  word-spacing: 1px;
+}
+
+
+
+ /*-=========================
+      Team Page Styling  
+ ============================*/
+
+ .team-heading h5{
+  font-size: .85rem;
+  font-weight: 600;
+  color: var(--sydney-grey-color);
+  font-family: var(--font-family);
+  margin-bottom: .4rem;
+  word-spacing: 2px;
+  text-transform: uppercase;
+ }
+
+ .team-heading h2{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: var(--font-family);
+  color: var(--sydney-headings-color);
+ }
+ .team-heading p{
+  font-size: 1.03rem;
+  font-weight: 500;
+  color: var(--sydney-text-color);
+  width: 70%;
+  margin-bottom: 0;
+  font-family: var(--font-family);
+  line-height: 1.7;
+ }
+
+ .team-content p{
+  font-size: .8rem !important;
+  letter-spacing: .1px;
+  font-weight: 500;
+  color: var(--sydney-grey-color);
+  font-family: var(--font-family);
+  padding: .4rem 0;
+  margin-bottom: 0rem;
+ }
+
+.team-content h3{
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+}
+.social-icon{
+  padding-top: .7rem;
+}
+.social-icon span {
+  margin-right: 1.3rem;
+}
+
+.social-icon span i{
+  font-size: 1rem;
+  color: var(--sydney-grey-color);
+  cursor: pointer;
+}
+
+
+.portfolio-heading{
+  margin-bottom: 3rem;
+}
+.portfolio-heading h2{
+  font-size: 44px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+}
+.portfolio-heading p{
+  width: 50%;
+  font-size: 1.03rem !important;
+  font-weight: 500;
+  color: var(--sydney-text-color);
+  font-family: var(--font-family);
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+.portfolio-page p{
+  margin-bottom: 0;
+  font-weight: 500;
+  color: var(--sydney-grey-color);
+  font-size: .86rem;
+  padding: .7rem 0 .3rem 0;
+}
+.portfolio-page h4{
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+}
+
+
+.contact img{
+  cursor: pointer;
+}
+.single-contact-page h5{
+  font-size: .89rem;
+  font-weight: 600;
+  color: var(--sydney-grey-color);
+  font-family: var(--font-family);
+}
+.single-contact-page h4{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--sydney-text-color);
+  font-family: var(--font-family);
+  margin-bottom: 0;
+  margin-top: 1.3rem;
+}
+
+.form-heading {
+  font-size: 1.7rem !important;
+  font-weight: 600 !important;
+  line-height: 1;
+  color: var(--sydney-headings-color);
+  font-family: var(--font-family);
+  width: 75% !important;
+  margin-bottom: 2.5rem !important;
+}
+
+form input{
+  padding: .8rem 1rem !important;
+  border: none !important;
+  outline: none !important;
+  background-color: #F4F5F7 !important;
+  border-radius: 0px !important;
+}
+
+form textarea {
+  padding: .8rem 1rem !important;
+  border: none !important;
+  outline: none !important;
+  background-color: #F4F5F7 !important;
+  border-radius: 0px !important; 
+}
+form textarea:focus,
+form input:focus{
+  box-shadow: none !important;
+}
+form label{
+  font-size: 1.03rem;
+  font-weight: 500;
+  color: var(--sydney-text-color);
+  font-family: var(--font-family);
+}
+form label span{
+  color: var(--sydney-button-background);
+  margin-bottom: 3px;
+}
+
+/* form .row>*{
+    padding-right: calc(var(--bs-gutter-x) * .0);
+    padding-left: calc(var(--bs-gutter-x) * .0);
+} */

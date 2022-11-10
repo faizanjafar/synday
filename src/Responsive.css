@@ -1,0 +1,322 @@
+
+:root{
+  --sydney-headings-color: #00102E;
+  --brand-color: #FFD00A;
+  --btn-hover-bg: #c7a210;
+  --sydney-dark-background: #00102E;
+  --sydney-grey-color: #737C8C;
+  --sydney-text-color: #233452;
+  --sydney-light-background: #F4F5F7;
+  --white-color: #fff;
+  --sydney-button-background: #d65050;
+  --font-family: Manrope, sans-serif;
+}
+
+@media(max-width: 1147px){
+ 
+  .banner-content h2{
+    width: 85%;
+  }
+  .banner-content p{
+    width: 80%;
+  }
+  .single-content h1{
+    width: 100%;
+  }
+}
+
+
+
+@media(max-width: 991px){
+  .header_banner_content h1{
+    width: 70%;
+    font-size: 50px;
+  }
+  .header_banner_content p{
+    width: 70%;
+    font-size: 1rem;
+  }
+  .banner-content h2{
+    width: 95%;
+    font-size: 40px;
+  }
+  .banner-content p{
+    width: 100%;
+  }
+  .seller-content{
+    transform: translateY(0);
+  }
+  .banner-content{
+    padding-left: 0;
+  }
+  /* Hire css  */
+  .hire{
+    flex-direction: column;
+    text-align: center;
+  }
+  .hire-content h2{
+    margin: auto;
+    width: 80%;
+  }
+  .team-heading p{
+    width: 90%;
+  }
+  .portfolio-heading p{
+    width: 80%;
+  }
+}
+
+@media(max-width: 768px){
+  .menu-btn,
+  .cancel-btn{
+    display: block;
+    position: absolute;  
+    font-size: 1.3rem;
+  }
+  .menu-btn{
+    top: 1.3rem;
+    right: 2rem;
+  }
+  .cancel-btn{
+    top: 1.4rem;
+    right: 1.7rem;
+  }
+  .icon-search {
+    right: 4rem;
+  }
+  .menu-btn i,
+  .cancel-btn i{
+    color: var(--white-color);
+  }
+  .nav-logo{
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    left: 1rem;
+  }
+  nav{
+    opacity: 1;
+  }
+  .nav_items ul{
+    position: fixed;
+    top: 0;
+    left: -130%;
+    background-color: var(--sydney-text-color);
+    width: 350px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-left: 2rem;
+    transition: all .5s ease-in-out;
+
+    z-index: 999;
+  }
+  .nav_items ul.show{
+    left: 0;
+  }
+  
+  .nav_items ul li{
+    margin: .7rem 0;
+  }
+  .nav_items ul li a{
+    font-size: 1.12rem;
+    font-weight: 500;
+    padding: .5rem 0;
+  }
+  .banner01,
+  .banner02{
+    flex-direction: column-reverse;
+  }
+  .banner-content{
+    padding:1.5rem 0;
+  }
+  .banner-content p{
+    width: 80%;
+  }
+  .search input{
+    width: 60%;
+  }
+  /* Hire css  */
+  .hire-content h2{
+    margin: auto;
+    width: 100%;
+  }
+  .services h3{
+    width: 100%;
+    font-size: 30px;
+  }
+  .single-content h1{
+    font-size: 45px;
+  }
+  .single-content p{
+    width: 100%;
+  }
+  .team-heading p{
+    width: 100%;
+  }
+  .portfolio-heading p{
+    width: 90%;
+  }
+  .form-heading{
+    width: 90% !important;
+  }
+}
+
+
+@media(max-width: 667px){
+  .portfolio-heading{
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+  .portfolio-heading h2{
+    text-align: start;
+    margin-bottom: 1rem;
+  }
+  nav{
+    padding: 0px 2rem;
+  }
+  .banner-content p{
+    width: 100%;
+  }
+  .seller{
+    padding-bottom: 2rem;
+  }
+  .right-brand{
+    padding-left: 0rem !important;
+  }
+  .form-heading{
+    width: 100% !important;
+  }
+}
+
+
+
+
+@media(max-width: 500px){
+  
+  .header_banner_content h1 {
+    width: 90%;
+    font-size: 42px;
+  }
+  .header_banner_content p{
+    width: 90%;
+  }
+  .services h3{
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  .heading h2 {
+    font-size: 34px;
+  }
+  .about-comp2 .single-content h2{
+    font-size: 42px;
+  }
+  .about-comp2 .single-content p{
+    width: 100%;
+  }
+  .hire-content h2 {
+    font-size: 40px;
+  }
+  .portfolio-heading p{
+    width: 100%;
+    font-size: 1rem !important;
+  }
+}
+
+@media(max-width: 430px){
+  nav .logo h2{
+    font-size: 1.7rem;
+  }
+  nav{
+    padding: 0rem 1rem;
+  }
+  .header_banner_content h1 {
+    width: 100%;
+    font-size: 37px;
+    line-height: 1.2;
+  }
+  .icon-search {
+    right: 4.5rem;
+  }
+  .header_banner_content p{
+    width: 90%;
+  }
+  .header-btn{
+    flex-direction: column;
+  }
+  .header-btn .white-btn{
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .banner-content h2{
+    font-size: 34px;
+    width: 100%;
+  }
+  .search input{
+    width: 70%;
+  }
+  .search-btn{
+    padding: .5rem 18px .5rem 18px;
+  }
+  .portfolio-heading h2{
+    font-size: 35px;
+  }
+  .hire-content h2{
+    font-size: 35px;
+  }
+  .blog-right p{
+    font-size: 17px;
+    word-spacing: 1px;
+    letter-spacing: .2px;
+  }
+  .blog-detail a .title{
+    font-size: 25px;
+  }
+  .services h3{
+    font-size: 28px;
+  }
+  .about-comp2 .single-content{
+    padding-left: 0;
+  }
+  .single-content h1{
+    font-size: 38px;
+  }
+  .about-comp2 .single-content h2{
+    font-size: 38px;
+  }
+  .form-heading{
+    font-size: 1.5rem !important;
+  }
+}
+
+
+
+@media(max-width: 350px){
+  
+  .header_banner_content h1 {
+    width: 100%;
+    font-size: 34px;
+  }
+  .header_banner_content p{
+    width: 100%;
+    font-size: 1rem;
+  }
+  .header-btn{
+    flex-direction: column;
+  }
+  .header-btn .white-btn{
+    margin-left: 0;
+    margin-top: 2rem;
+  }
+  .banner-content h2{
+    font-size: 34px;
+    width: 100%;
+  }
+  .single-content h1{
+    font-size: 34px;
+  }
+}
